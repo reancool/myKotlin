@@ -5,17 +5,16 @@ import java.util.*
  */
 fun main(args: Array<String>)
 {
-    var nums= listOf(1,2,3)
-    for ((i,e) in nums.withIndex()){
-        println("index--${i}-value-${e}")
-    }
-
-    var map = TreeMap<String, Int>()
-    map["Navin"]=543
-    map["Kishor"]=666
-
-    for ((name,age)in map)
-    {
-        println("${name}--${age}")
+    println("a+b=${add(5,6)}")
+    println("max=${max(5,6)}")
+}
+fun add(a:Int,b:Int) : Int{
+    return  a+b
+}
+fun max(a:Int,b:Int):Int{
+    if(a>b){
+        return a
+    }else{
+        return b
     }
 }
