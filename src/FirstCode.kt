@@ -5,14 +5,21 @@ import java.util.*
  */
 fun main(args: Array<String>)
 {
-    var str: String="4a"
-    var num:Int=
+   var a1=AlienKt()
+    a1.skills="Java"
+    a1.show()
 
-    try {
-       str.toInt()
-    } catch(e: NumberFormatException) {
-        -1
-    }
-    num++
-    println(num)
+    var a2=AlienKt()
+    a2.skills="SQL"
+    a2.show()
+
+    var a3=a1.plus(a2)
+    a3.show()
+
+}
+
+fun AlienKt.plus(a:AlienKt):AlienKt{
+    var newAlien=AlienKt()
+    newAlien.skills=this.skills+" "+a.skills
+    return newAlien
 }
