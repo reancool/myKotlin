@@ -5,16 +5,13 @@ import java.util.*
  */
 fun main(args: Array<String>)
 {
-    println("a+b=${add(5,6)}")
-    println("max=${max(5,6)}")
+    var finalAmt=calaAmount(50,0.03)
+    var finalAmt2=calaAmount(interest=0.03,amt=60)
+    println("finalAmt is ${finalAmt}")
+    println("finalAmt2 is ${finalAmt2}")
+
 }
-fun add(a:Int,b:Int) : Int{
-    return  a+b
-}
-fun max(a:Int,b:Int):Int{
-    if(a>b){
-        return a
-    }else{
-        return b
-    }
+@JvmOverloads
+fun calaAmount(amt:Int,interest:Double=0.04) :Double{
+    return amt+amt*interest
 }
