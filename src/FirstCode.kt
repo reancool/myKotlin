@@ -4,8 +4,10 @@ import java.util.*
 /**
  * Created by fly on 2017/7/8.
  */
-open class Human{
-
+open class Human(){
+    init {
+        println("in human")
+    }
     open fun think(){
         println("real Thinking")
     }
