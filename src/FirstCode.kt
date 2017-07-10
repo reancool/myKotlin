@@ -1,3 +1,4 @@
+import java.math.BigInteger
 import java.util.*
 
 /**
@@ -5,39 +6,47 @@ import java.util.*
  */
 fun main(args: Array<String>)
 {
-   var a1=AlienKt()
-    a1.skills="Java"
-    a1.show()
+    var num=7
+    var fact=1
+    for (i in 1..num    ){
+        fact=fact*i
+    }
+    println(fact)
 
-    var a2=AlienKt()
-    a2.skills="SQL"
-    a2.show()
+    println(fact(num))
 
-    var a3=a1.pluss(a2)
-    a3.show()
+    var bNum=BigInteger("70")
+    println(factB(bNum))
 
-    var a4=a1 plusI a2
-    a4.show()
+    var bbNum=BigInteger("70")
+    println(factBB(bbNum, BigInteger.ONE))
 
-    var a5=a1 + a2
-    a5.show()
+}
+fun fact(num:Int):Int{
+    if(num==0)
+        return 1
+    else
+        return num*fact(num-1)
 }
 
-fun AlienKt.pluss(a:AlienKt):AlienKt{
-    var newAlien=AlienKt()
-    newAlien.skills=this.skills+" "+a.skills
-    return newAlien
+fun factB(num:BigInteger):BigInteger{
+    if(num==BigInteger.ZERO)
+        return BigInteger("1")
+    else
+        return num* factB(num-BigInteger.ONE)
 }
 
-infix fun AlienKt.plusI(a:AlienKt):AlienKt{
-    var newAlien=AlienKt()
-    newAlien.skills=this.skills+" "+a.skills
-    return newAlien
+fun factBB(num:BigInteger,result:BigInteger):BigInteger{
+    if(num==BigInteger.ZERO)
+        return BigInteger("1")
+    else
+        println("hello "+num)
+        return num* factBB(num-BigInteger.ONE,num*result)
 }
-operator infix fun AlienKt.plus(a:AlienKt):AlienKt{
-    var newAlien=AlienKt()
-    newAlien.skills=this.skills+" "+a.skills
-    return newAlien
-}
+
+
+
+
+
 
 
