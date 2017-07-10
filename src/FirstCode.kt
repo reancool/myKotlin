@@ -4,21 +4,22 @@ import java.util.*
 /**
  * Created by fly on 2017/7/8.
  */
-class Human (var n: String){
+open class Human{
 
-    var name:String=n
-    var age:Int=0
-    constructor(age:Int,name:String):this(name){
-        this.age=age
-    }
-    fun think(){
-        println("I'm thinking  ${name} --$age")
+    open fun think(){
+        println("real Thinking")
     }
 }
-
+class Alien2 : Human()
+{
+    override fun think() {
+        super.think()
+        println("vitrual Thinking")
+    }
+}
 fun main(args: Array<String>)
 {
- var h =Human(name = "fly",age=25)
+ var h =Alien2()
     h.think()
 
 
