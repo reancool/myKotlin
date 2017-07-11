@@ -4,24 +4,21 @@ import java.util.*
 /**
  * Created by fly on 2017/7/8.
  */
-open class Human(){
-    init {
-        println("in human")
-    }
-    open fun think(){
-        println("real Thinking")
+abstract class Human(){
+   abstract fun think()
+    fun talk(){
+
     }
 }
-class Alien2 : Human()
-{
+class Doctor:Human(){
     override fun think() {
-        super.think()
-        println("vitrual Thinking")
+        println(" docker")
     }
 }
+
 fun main(args: Array<String>)
 {
- var h =Alien2()
+ var h =Doctor()
     h.think()
 
 
