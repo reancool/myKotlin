@@ -4,24 +4,20 @@ import java.util.*
 /**
  * Created by fly on 2017/7/8.
  */
-abstract class Human(){
-   abstract fun think()
-    fun talk(){
-
-    }
-}
-class Doctor:Human(){
-    override fun think() {
-        println(" docker")
+class A
+{
+    companion object {
+        @JvmStatic
+        fun show()
+        {
+            println("Hello")
+        }
     }
 }
 
 fun main(args: Array<String>)
 {
- var h =Doctor()
-    h.think()
-
-
+    A.show()
 }
 
 
