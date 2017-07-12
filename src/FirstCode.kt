@@ -7,17 +7,25 @@ import java.util.*
 class A
 {
     companion object {
-        @JvmStatic
-        fun show()
-        {
-            println("Hello")
-        }
+
+        fun create():A=A()
+    }
+
+
+    fun show()
+    {
+        println("in  show")
     }
 }
 
 fun main(args: Array<String>)
 {
-    A.show()
+    var obj=A.create()
+    obj.show()
+
+//    var obj=A()
+//    obj.show()
+
 }
 
 
